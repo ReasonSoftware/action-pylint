@@ -1,0 +1,31 @@
+name: version
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: "Semantic Version (vX.X.X)"
+        required: true
+
+jobs:
+  version:
+    name: version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Identify version type
+        id: version
+        run: |
+          if [[ ${{ github.event.inputs.version }} =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "production=true" >> $GITHUB_OUTPUT
+          else
+            echo "production=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update Changelog
+        uses: docker://antonyurchenko/changelog-version:v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.MACHINE_GH_TOKEN }}
+          VERSION: ${{ github.event.inputs.version }}
+          UPDATE_TAGS: "${{ steps.version.outputs.production }}"

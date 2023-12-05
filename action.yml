@@ -1,0 +1,30 @@
+name: "Pylint GitHub Action"
+description: "Run Pylint check against application files"
+inputs:
+  filepaths:
+    description: "A list of all paths to test. (\"\*/\*.py\", \"src/\")"
+    required: false
+    default: "."
+  options:
+    description: "Extra options"
+    required: false
+    default: "--recursive=y --rcfile=/pyproject.toml"
+  requirements_file:
+    description: "requirements.txt filepath"
+    required: false
+    default: ""
+  init_script:
+    description: "Environment preparation shell script filepath"
+    required: false
+    default: ""
+outputs:
+  score:
+    description: "Pylint score"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.filepaths }}
+    - ${{ inputs.options }}
+    - ${{ inputs.requirements_file }}
+    - ${{ inputs.init_script }}

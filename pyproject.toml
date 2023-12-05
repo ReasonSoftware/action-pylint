@@ -1,0 +1,44 @@
+[tool.pylint.main]
+# Return non-zero exit code if any of these messages/categories are detected,
+# even if score is above --fail-under value. Syntax same as enable. Messages
+# specified are enabled, while categories only check already-enabled messages.
+# fail-on = ["C0301"]
+
+disable = ["logging-fstring-interpolation", "broad-exception-caught"]
+
+# Use multiple processes to speed up Pylint. Specifying 0 will auto-detect the
+# number of processors available to use, and will cap the count on Windows to
+# avoid hangs.
+jobs = 2
+
+# Files or directories to be skipped. They should be base names, not paths.
+ignore = ["CVS", "venv"]
+
+[tool.pylint.basic]
+good-names = ["i", "j", "k", "ex", "Run", "_", "e", "v", "f"]
+
+[tool.pylint.design]
+# Minimum number of public methods for a class (see R0903).
+min-public-methods = 1
+
+[tool.pylint.format]
+# Maximum number of characters on a single line.
+max-line-length = 80
+
+[tool.pylint.imports]
+# List of modules that can be imported at any level, not just the top level one.
+allow-any-import-level = true
+
+[tool.pylint.logging]
+# The type of string formatting that logging methods do. `old` means using %
+# formatting, `new` is for `{}` formatting.
+logging-format-style = "new"
+
+[tool.pylint.refactoring]
+# Maximum number of nested blocks for function / method body
+max-nested-blocks = 5
+
+# Complete name of functions that never returns. When checking for inconsistent-
+# return-statements if a never returning function is called then it will be
+# considered as an explicit return statement and no message will be printed.
+never-returning-functions = ["sys.exit", "argparse.parse_error"]
