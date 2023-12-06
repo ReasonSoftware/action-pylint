@@ -5,6 +5,7 @@
 ## Added
 
 - Alpine Linux badge to the Readme
+- Docker ignore file
 
 ## Fixed
 
