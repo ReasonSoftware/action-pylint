@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.0.1] - 2023-12-06
+
 ## Added
 
 - Alpine Linux badge to the Readme
@@ -20,5 +22,6 @@
 
 _First release_
 
-[Unreleased]: https://github.com/ReasonSoftware/action-pylint/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/ReasonSoftware/action-pylint/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/ReasonSoftware/action-pylint/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/ReasonSoftware/action-pylint/releases/tag/v1.0.0
