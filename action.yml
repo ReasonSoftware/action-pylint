@@ -1,5 +1,10 @@
 name: "Pylint GitHub Action"
 description: "Run Pylint check against application files"
+
+branding:
+  icon: 'check'
+  color: 'green'
+
 inputs:
   filepaths:
     description: "A list of all paths to test (e.g. \"src/\")"
@@ -17,9 +22,11 @@ inputs:
     description: "Environment preparation shell script filepath"
     required: false
     default: ""
+
 outputs:
   score:
     description: "Pylint score"
+
 runs:
   using: "docker"
   image: "Dockerfile"
