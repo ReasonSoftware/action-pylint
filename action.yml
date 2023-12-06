@@ -2,7 +2,7 @@ name: "Pylint GitHub Action"
 description: "Run Pylint check against application files"
 inputs:
   filepaths:
-    description: "A list of all paths to test. (\"\*/\*.py\", \"src/\")"
+    description: "A list of all paths to test (e.g. \"src/\")"
     required: false
     default: "."
   options:

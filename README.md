@@ -4,6 +4,7 @@
 [![Release](https://img.shields.io/github/v/release/ReasonSoftware/action-pylint)](https://github.com/ReasonSoftware/action-pylint/releases/latest)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-greenyellow.svg)](https://www.python.org/downloads/release/python-3120/)
 [![Pylint 3.0.2](https://img.shields.io/badge/pylint-3.0.2-blue.svg)](https://pypi.org/project/pylint/)
+[![Alpine 3.18](https://img.shields.io/badge/alpine-3.18-lightblue.svg)](https://hub.docker.com/_/alpine)
 [![License](https://img.shields.io/github/license/ReasonSoftware/action-pylint)](LICENSE.md)
 
 ## Overview
