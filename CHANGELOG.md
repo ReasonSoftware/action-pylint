@@ -2,10 +2,6 @@
 
 ## [Unreleased]
 
-## Added
-
-- Docker pulls badge
-
 ## [1.0.2] - 2023-12-06
 
 ## Added
