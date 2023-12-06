@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+## Added
+
+- Alpine Linux badge to the Readme
+
+## Fixed
+
+- Input description in the action.yml
+
 ## [1.0.0] - 2023-12-05
 
 _First release_
