@@ -29,8 +29,3 @@ updates:
     target-branch: "main"
     reviewers:
       - "antkadinov"
-    ignore:
-      - dependency-name: "*"
-        update-types: [
-          "version-update:semver-patch"
-        ]

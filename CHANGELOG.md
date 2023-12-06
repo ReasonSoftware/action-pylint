@@ -13,6 +13,7 @@
 ## Updated
 
 - Clarified Docker image version
+- Set Dependabot to update pip patch versions
 
 ## [1.0.0] - 2023-12-05
 
