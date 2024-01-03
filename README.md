@@ -2,8 +2,8 @@
 
 [![CI](https://github.com/ReasonSoftware/action-pylint/actions/workflows/release.yml/badge.svg)](https://github.com/ReasonSoftware/action-pylint/actions/workflows/release.yml)
 [![Release](https://img.shields.io/github/v/release/ReasonSoftware/action-pylint)](https://github.com/ReasonSoftware/action-pylint/releases/latest)
-[![Python 3.12.0](https://img.shields.io/badge/python-3.12.0-greenyellow.svg)](https://www.python.org/downloads/release/python-3120/)
-[![Pylint 3.0.2](https://img.shields.io/badge/pylint-3.0.2-blue.svg)](https://pypi.org/project/pylint/)
+[![Python 3.12.1](https://img.shields.io/badge/python-3.12.1-greenyellow.svg)](https://www.python.org/downloads/release/python-3121/)
+[![Pylint 3.0.3](https://img.shields.io/badge/pylint-3.0.3-blue.svg)](https://pypi.org/project/pylint/)
 [![Alpine 3.18](https://img.shields.io/badge/alpine-3.18-lightblue.svg)](https://hub.docker.com/_/alpine)
 [![Docker Pulls](https://img.shields.io/docker/pulls/reasonsoftware/action-pylint)](https://hub.docker.com/r/reasonsoftware/action-pylint)
 [![License](https://img.shields.io/github/license/ReasonSoftware/action-pylint)](LICENSE.md)
