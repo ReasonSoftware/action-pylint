@@ -4,8 +4,9 @@
 
 ## Changed
 
-- Bump pylint to 3.0.3
-- Bump Python to 3.12.1
+- Bump pylint to 3.1.0
+- Bump Python to 3.12.2
+- Bump Alpine to 3.19
 
 ## [1.0.2] - 2023-12-06
 
