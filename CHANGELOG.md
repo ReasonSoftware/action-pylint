@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Bump Python to 3.12.3
+
 ## [1.1.0] - 2024-03-06
 
 ## Changed
