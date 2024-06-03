@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## Changed
+
+- Bump pylint to 3.2.2
+
 ## [1.1.1] - 2024-05-02
 
 ### Changed
