@@ -4,7 +4,7 @@
 
 ### Changed
 
-- Bump pylint to 3.2.2
+- Bump pylint to 3.2.5
 - Bump Python to 3.12.4
 - Bump Alpine to 3.20
 
