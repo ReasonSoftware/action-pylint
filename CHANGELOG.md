@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Bump pylint to 3.2.2
+- Bump Python to 3.12.4
+- Bump Alpine to 3.20
+
 ## [1.2.0] - 2024-06-03
 
 ## Changed
