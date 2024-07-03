@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Use the `Debian` 12.6 _bookworm_ instead of `Alpine` docker image
+
 ## [1.2.1] - 2024-07-02
 
 ### Changed
