@@ -4,7 +4,7 @@
 [![Release](https://img.shields.io/github/v/release/ReasonSoftware/action-pylint)](https://github.com/ReasonSoftware/action-pylint/releases/latest)
 [![Python](https://img.shields.io/badge/python-3.12.4-greenyellow.svg)](https://www.python.org/downloads/release/python-3124/)
 [![Pylint](https://img.shields.io/badge/pylint-3.2.5-blue.svg)](https://pypi.org/project/pylint/)
-[![Alpine](https://img.shields.io/badge/alpine-3.20-lightblue.svg)](https://hub.docker.com/_/alpine)
+[![Debian](https://img.shields.io/badge/debian-12.6-purple.svg)](https://www.debian.org/releases/bookworm/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/reasonsoftware/action-pylint)](https://hub.docker.com/r/reasonsoftware/action-pylint)
 [![License](https://img.shields.io/github/license/ReasonSoftware/action-pylint)](LICENSE.md)
 
