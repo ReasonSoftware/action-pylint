@@ -16,7 +16,7 @@ Action fails if pylint score is less than 10.00/10.
 ```yaml
 - name: Python linter
   id: pylint
-  uses: docker://reasonsoftware/action-pylint:v1
+  uses: docker://reasonsoftware/action-pylint:v2
 ```
 
 ## Inputs
