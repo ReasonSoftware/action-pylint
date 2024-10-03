@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/ReasonSoftware/action-pylint/actions/workflows/release.yml/badge.svg)](https://github.com/ReasonSoftware/action-pylint/actions/workflows/release.yml)
 [![Release](https://img.shields.io/github/v/release/ReasonSoftware/action-pylint)](https://github.com/ReasonSoftware/action-pylint/releases/latest)
-[![Python](https://img.shields.io/badge/python-3.12.5-greenyellow.svg)](https://www.python.org/downloads/release/python-3125/)
+[![Python](https://img.shields.io/badge/python-3.12.6-greenyellow.svg)](https://www.python.org/downloads/release/python-3126/)
 [![Pylint](https://img.shields.io/badge/pylint-3.3.1-blue.svg)](https://pypi.org/project/pylint/)
 [![Debian](https://img.shields.io/badge/debian-12.6-purple.svg)](https://www.debian.org/releases/bookworm/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/reasonsoftware/action-pylint)](https://hub.docker.com/r/reasonsoftware/action-pylint)
