@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Bump pylint to 3.3.3
+- Bump Python to 3.12.8
+
 ## [2.0.3] - 2024-10-03
 
 ### Changed
