@@ -8,15 +8,15 @@ on:
 env:
   DOCKER_IMAGE_NAME: reasonsoftware/action-pylint
   PYTHON_LATEST_VERSION: 3.13.4
-  PYTHON_VERSIONS: 3.11.13,3.12.11,${PYTHON_LATEST_VERSION}
+  PYTHON_VERSIONS: '["3.11.13","3.12.11","3.13.4"]'
 
 jobs:
   build:
     strategy:
-        max-parallel: 3
         matrix:
-            python-version: [${{ env.PYTHON_VERSIONS }}]
+            python-version: ${{ fromJSON(env.PYTHON_VERSIONS) }}
         fail-fast: true
+        max-parallel: 2
     name: Build and test for Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
     steps:
