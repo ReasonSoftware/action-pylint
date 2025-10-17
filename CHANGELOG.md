@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [2.0.6] - 2025-10-17
+
 ### Changed
 
 - Bump pylint to 3.3.9
@@ -103,7 +105,8 @@
 
 _First release_
 
-[Unreleased]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.5...HEAD
+[Unreleased]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.6...HEAD
+[2.0.6]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.5...v2.0.6
 [2.0.5]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.2...v2.0.3
