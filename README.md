@@ -26,9 +26,9 @@ Available tags:
 - `v3` - latest stable release
 - `v3-py3` - latest stable release with Python 3
 - `v3-x.y.z-py3` - latest stable release with Python 3 and specific Pylint version
-- `v3-py3.11`, `v3-py3.12`, `v3-py3.13` - latest stable release with selected Python version
-- `v3-x.y.z-py3.11`, `v3-x.y.z-py3.12`, `v3-x.y.z-py3.13` - latest stable release with selected Python version and specific Pylint version
-- `v3-x.y.z-py3.11.13`, `v3-x.y.z-py3.12.11`, `v3-x.y.z-py3.13.4` - latest stable release with locked versions
+- `v3-py3.11`, `v3-py3.12`, `v3-py3.13`, `v3-py3.14` - latest stable release with selected Python version
+- `v3-x.y.z-py3.11`, `v3-x.y.z-py3.12`, `v3-x.y.z-py3.13`, `v3-x.y.z-py3.14` - latest stable release with selected Python version and specific Pylint version
+- `v3-x.y.z-py3.11.14`, `v3-x.y.z-py3.12.12`, `v3-x.y.z-py3.13.9`, `v3-x.y.z-py3.14.0` - latest stable release with locked versions
 
 ## Inputs
 
