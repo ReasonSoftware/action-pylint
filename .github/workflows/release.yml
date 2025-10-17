@@ -7,8 +7,8 @@ on:
 
 env:
   DOCKER_IMAGE_NAME: reasonsoftware/action-pylint
-  PYTHON_LATEST_VERSION: 3.13.4
-  PYTHON_VERSIONS: '["3.11.13","3.12.11","3.13.4"]'
+  PYTHON_LATEST_VERSION: 3.14.0
+  PYTHON_VERSIONS: '["3.11.14","3.12.12","3.13.9","3.14.0"]'
 
 jobs:
   build:

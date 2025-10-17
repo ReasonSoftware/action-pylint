@@ -1,5 +1,5 @@
 ARG PYTHON_VERSION
-FROM python:${PYTHON_VERSION}-slim-bookworm
+FROM python:${PYTHON_VERSION}-slim-trixie
 
 WORKDIR /
 
