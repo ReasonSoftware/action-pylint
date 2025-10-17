@@ -1,4 +1,5 @@
-FROM python:3.12.12-slim-trixie
+ARG PYTHON_VERSION
+FROM python:${PYTHON_VERSION}-slim-trixie
 
 WORKDIR /
 

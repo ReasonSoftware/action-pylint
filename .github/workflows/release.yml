@@ -7,14 +7,44 @@ on:
 
 env:
   DOCKER_IMAGE_NAME: reasonsoftware/action-pylint
+  PYTHON_LATEST_VERSION: 3.14.0
 
 jobs:
-  release:
-    name: Release
+  build:
+    strategy:
+        fail-fast: true
+        max-parallel: 2
+        matrix:
+          python-version:
+            - 3.11.14
+            - 3.12.12
+            - 3.13.9
+            - 3.14.0
+    name: Build and test for Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+
+      - name: Read Pylint version
+        id: pylint-version
+        uses: christian-draeger/read-properties@1.1.1
+        with:
+          path: 'requirements.txt'
+          properties: 'pylint'
+
+      - name: Prepare Docker Tags
+        env:
+          PYLINT_VERSION_EQ: ${{ steps.pylint-version.outputs.pylint }}
+          PYTHON_VERSION: ${{ matrix.python-version }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+        shell: bash
+        run: |
+          PYLINT_VERSION="${PYLINT_VERSION_EQ#*=}"
+          echo "PYLINT_VERSION=${PYLINT_VERSION}" >> "$GITHUB_ENV"
+          echo "PYTHON_VERSION_MAJOR=${PYTHON_VERSION%%.*}" >> "$GITHUB_ENV"
+          echo "PYTHON_VERSION_MINOR=${PYTHON_VERSION#*.}" >> "$GITHUB_ENV"
+          echo "TAG_MAJOR=${GITHUB_REF_NAME%%.*}" >> "$GITHUB_ENV"
 
       - name: Login to Docker Container Registry
         uses: docker/login-action@v3
@@ -34,18 +64,22 @@ jobs:
         with:
           images: |
             ${{ env.DOCKER_IMAGE_NAME }}
+          flavor: |
+            latest=false
+            prefix=${{ env.TAG_MAJOR }}-
           tags: |
-            type=semver,pattern=v{{version}}
-            type=semver,pattern=v{{major}}.{{minor}}
-            type=semver,pattern=v{{major}}
+            type=raw,value=py${{ env.PYTHON_VERSION_MINOR }}
+            type=raw,value=${{ env.PYLINT_VERSION }}-py${{ matrix.python-version }}
+            type=raw,value=${{ env.PYLINT_VERSION }}-py${{ env.PYTHON_VERSION_MINOR }}
 
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: .
+          build-args: PYTHON_VERSION=${{ matrix.python-version }}
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ env.DOCKER_IMAGE_NAME }}:latest
+          tags: ${{ env.DOCKER_IMAGE_NAME }}:${{ env.TAG_MAJOR }}-${{ env.PYLINT_VERSION }}-py${{ matrix.python-version }}
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Identify version type
@@ -62,10 +96,40 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
+          build-args: PYTHON_VERSION=${{ matrix.python-version }}
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - name: Add latest tags for latest Python version
+        if: matrix.python-version == env.PYTHON_LATEST_VERSION && steps.version.outputs.production == 'true'
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          build-args: PYTHON_VERSION=${{ matrix.python-version }}
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ${{ env.DOCKER_IMAGE_NAME }}:latest
+            ${{ env.DOCKER_IMAGE_NAME }}:${{ env.TAG_MAJOR }}
+            ${{ env.DOCKER_IMAGE_NAME }}:${{ env.TAG_MAJOR }}-py${{ env.PYTHON_VERSION_MAJOR }}
+            ${{ env.DOCKER_IMAGE_NAME }}:${{ env.TAG_MAJOR }}-${{ env.PYLINT_VERSION }}-py${{ env.PYTHON_VERSION_MAJOR }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Identify version type
+        id: version
+        run: |
+          if [[ ${{ github.ref_name }} =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "production=true" >> $GITHUB_OUTPUT
+          else
+            echo "production=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Release
         uses: docker://antonyurchenko/git-release:v5
