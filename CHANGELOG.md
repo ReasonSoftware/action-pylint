@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+### Changed
+
+- Bump pylint to 3.3.9
+- Bump Python to 3.12.12
+- Bump Debian to 13.1
+
 ## [2.0.5] - 2025-06-09
 
 ### Changed
