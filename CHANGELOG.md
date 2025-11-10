@@ -9,7 +9,7 @@
 ### Changed
 
 - Action versioning scheme format
-- Bump pylint to 4.0.1
+- Bump pylint to 4.0.2
 
 ## [2.0.6] - 2025-10-17
 

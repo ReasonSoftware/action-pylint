@@ -6,7 +6,7 @@
 [![Python](https://img.shields.io/badge/python-3.12.12-greenyellow.svg)](https://www.python.org/downloads/release/python-31212/)
 [![Python](https://img.shields.io/badge/python-3.13.9-greenyellow.svg)](https://www.python.org/downloads/release/python-3139/)
 [![Python](https://img.shields.io/badge/python-3.14.0-greenyellow.svg)](https://www.python.org/downloads/release/python-3140/)
-[![Pylint](https://img.shields.io/badge/pylint-4.0.1-blue.svg)](https://pypi.org/project/pylint/)
+[![Pylint](https://img.shields.io/badge/pylint-4.0.2-blue.svg)](https://pypi.org/project/pylint/)
 [![Debian](https://img.shields.io/badge/debian-13.1-pink.svg)](https://www.debian.org/releases/trixie/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/reasonsoftware/action-pylint)](https://hub.docker.com/r/reasonsoftware/action-pylint)
 [![License](https://img.shields.io/github/license/ReasonSoftware/action-pylint)](LICENSE.md)
