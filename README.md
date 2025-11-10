@@ -1,3 +1,5 @@
+# :warning: THIS PROJECT IS DEPRECATED :warning:
+
 # Python Linter GitHub Action
 
 [![CI](https://github.com/ReasonSoftware/action-pylint/actions/workflows/release.yml/badge.svg)](https://github.com/ReasonSoftware/action-pylint/actions/workflows/release.yml)
