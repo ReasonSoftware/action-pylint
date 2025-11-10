@@ -2,14 +2,16 @@
 
 ## [Unreleased]
 
-### Added
-
-- Support for multiple Python versions (3.11, 3.12, 3.13)
+## [3.0.0] - 2025-11-10
 
 ### Changed
 
 - Action versioning scheme format
 - Bump pylint to 4.0.2
+
+### Added
+
+- Support for multiple Python versions (3.11, 3.12, 3.13)
 
 ## [2.0.6] - 2025-10-17
 
@@ -114,7 +116,8 @@
 
 _First release_
 
-[Unreleased]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.6...HEAD
+[Unreleased]: https://github.com/ReasonSoftware/action-pylint/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.6...v3.0.0
 [2.0.6]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.5...v2.0.6
 [2.0.5]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.4...v2.0.5
 [2.0.4]: https://github.com/ReasonSoftware/action-pylint/compare/v2.0.3...v2.0.4
