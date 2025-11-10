@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+### Added
+
+- Support for multiple Python versions (3.11, 3.12, 3.13)
+
+### Changed
+
+- Action versioning scheme format
+- Bump pylint to 4.0.2
+
 ## [2.0.6] - 2025-10-17
 
 ### Changed
